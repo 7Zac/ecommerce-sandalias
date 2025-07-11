@@ -1,5 +1,5 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
+<h1 className:"text-color🔴">Os nomes, preços e descrições deste projeto são fictícios, exceto, a própria marca.</h1>
 ## Getting Started
 
 First, run the development server:
