@@ -1,5 +1,10 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+<span
+style="color:red;">
+Os nomes, preços e descrições deste projeto são fictícios, exceto, a própria marca.
+</span>
+
 ## Getting Started
 
 First, run the development server:
@@ -9,7 +14,7 @@ npm run dev
 # or
 yarn dev
 # or
-pnpm dev
+pnpm de1
 # or
 bun dev
 ```
