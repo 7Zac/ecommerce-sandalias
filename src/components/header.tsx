@@ -8,7 +8,7 @@ import NavigationHeader from "@/components/navigation-header"
 
 export default function Header() {
   return (
-    <header className="bg-white shadow-sm">
+    <header className="shadow-lg sticky top-0 z-50 backdrop-blur bg-white/70 web-kit-backdrop-filter">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}

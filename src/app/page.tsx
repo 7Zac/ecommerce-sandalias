@@ -6,8 +6,8 @@ export default function HomePage() {
   return (
       <main>
       <HeroSection />
-      <FeaturedCategories />
       <PromotionalFeatures />
+      <FeaturedCategories />
       </main>
   );
 }
