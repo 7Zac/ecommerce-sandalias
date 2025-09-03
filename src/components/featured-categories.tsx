@@ -40,7 +40,7 @@ export default function FeaturedCategories() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {categories.map((category) => (
             <Link key={category.name} href={category.href}>
-              <Card className=" p-0 overflow-hidden hover:shadow-lg transition-all duration-300 group cursor-pointer">
+              <Card className=" p-0 overflow-hidden hover:shadow-lg border-0 transition-all duration-300 group cursor-pointer">
                 <CardContent className="p-0">
                   <div className="relative">
                     <img

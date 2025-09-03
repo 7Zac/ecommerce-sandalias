@@ -3,9 +3,11 @@ import Image from "next/image"
 
 export default function Footer() {
     return(            
-            <footer className="bg-cyan-900 text-white py-8">
+            <footer className="bg-cyan-900 text-white py-8 flex items-center">
                 <Link href="/" className="flex items-center space-x-2">
-                <img src="/" alt="" />
+                <img src="./LOGO_OLINDA_BRANCO.png" alt=""
+                className="h-[90px] w-[auto] object- ml-10"
+                />
                 </Link>
                 <div className="container mx-auto px-4">
                     <div className="flex items-center flex-col-reverse">
