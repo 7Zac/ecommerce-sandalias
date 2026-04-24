@@ -22,10 +22,10 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className={inter.className}>
         <CartProvider>
-        <Header/>
+          <Header />
           <main>{children}</main>
         </CartProvider>
-        <Footer/>
+        <Footer />
       </body>
     </html>
   )
