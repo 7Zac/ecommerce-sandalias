@@ -1,30 +1,31 @@
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
+import { Button } from "./ui/button"
 
 export default function FeaturedCategories() {
   const categories = [
     {
       name: "Homem",
       href: "/homem",
-      image: "/PREMIUM_PRETO.jpg",
+      image: "/anatomica-preta.png",
       description: "Conforto e estilo masculino",
     },
     {
       name: "Mulher",
       href: "/mulher",
-      image: "/ESTRELAR_CLASSIC.jpg",
+      image: "/bicolor_fem_caribe.png",
       description: "Elegância e sofisticação",
     },
     {
       name: "Kids",
       href: "/kids",
-      image: "/KIDS_DOG.jpg",
+      image: "/kids_fem_gato.png",
       description: "Diversão para os pequenos",
     },
     {
       name: "Baby",
       href: "/baby",
-      image: "/BABY_AVIAO.jpg",
+      image: "/baby_bee_jeans.png",
       description: "Cuidado especial para bebês",
     },
   ]
@@ -40,18 +41,24 @@ export default function FeaturedCategories() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {categories.map((category) => (
             <Link key={category.name} href={category.href}>
-              <Card className=" p-0 overflow-hidden hover:shadow-lg border-0 transition-all duration-300 group cursor-pointer">
+              <Card className="p-0 border-0 hover:bg-[#63a8b1] text-cyan-800 hover:text-white transition-all duration-300 group cursor-pointer">
                 <CardContent className="p-0">
-                  <div className="relative">
+                  <div className="p-6">
                     <img
                       src={category.image || "/placeholder.svg"}
                       alt={category.name}
-                      className="w-full h-78 object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full hover:scale-115 hover:-translate-y-8 transition-all duration-500 drop-shadow-md hover:drop-shadow-2xl"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                    <div className="absolute bottom-4 left-4 text-white">
-                      <h3 className="text-xl font-bold">{category.name}</h3>
-                      <p className="text-sm opacity-90">{category.description}</p>
+                    <div className="gap-6 flex flex-col items-center justify-center">
+                      <div className="flex flex-col items-center">
+                        <h3 className="text-4xl font-black uppercase">{category.name}</h3>
+                        <p className="text-sm">{category.description}</p>
+                      </div>
+
+                      <div className="">
+                        <Button className="cursor-pointer bg-cyan-500 hover:bg-cyan-800 text-white duration-500">Ver mais</Button>
+                      </div>
+
                     </div>
                   </div>
                 </CardContent>
