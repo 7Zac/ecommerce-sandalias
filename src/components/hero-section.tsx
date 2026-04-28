@@ -1,35 +1,51 @@
-import Image from "next/image"
+"use client";
+
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel"
+import { Card, CardContent } from "./ui/card"
+import React from "react"
+
 
 export default function HeroSection() {
-  return (
-    <section className="bg-gray-200 h-[600px] relative overflow-hidden">
-    <div className="w-full h-full flex items-center justify-center relative">
-            <Image
-              src="/banner_colecao_inverno.png"
-              alt="Mulher segurando sandálias da coleção Inverno 2025"
-              width={1920}
-              height={600}
-              className="w-[944px] h-auto rounded-2xl shadow-lg"
-              priority
-            />
-          
-          {/* Right side - Content */}
-            <div className=" absolute z-10 flex justify-center items-start w-full h-full mt-243 ml-90">
-            <div className="">
-              <Link href="/homem">
-                <Button size="lg" className="bg-white text-blue-600 hover:bg-cyan-800 hover:text-white font-semibold shadow-lg transition-colors duration-300">
-                  Explorar Coleção
-                </Button>
-              </Link>
-            </div>
-          </div>           
+  function CarouselDApiDemo() {
+    const [current, setCurrent] = React.useState(0)
+    const [count, setCount] = React.useState(0)
+
+    return (
+      <section className="mx-auto w-full max-w-[944px]">
+        <div className="relative w-full">
+          <Carousel className="w-full">
+            <CarouselContent>
+              {Array.from({ length: 5 }).map((_, index) => (
+                <CarouselItem key={index}>
+                  <Card className="m-px">
+                    <CardContent className="flex justify-center p-6">
+                      <img
+                        src="/banner_colecao_inverno.png"
+                        alt="Mulher segurando sandálias da coleção Inverno 2025"
+                        className="mx-auto rounded-2xl shadow-lg"
+                      />
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+
+          <div className="relative flex justify-center">
+            <Link href="/homem">
+              <Button size="lg" className="bg-white text-blue-600 hover:bg-cyan-800 hover:text-white font-semibold shadow-lg transition-colors duration-300">
+                Explorar Coleção
+              </Button>
+            </Link>
+          </div>
         </div>
-        <div className="absolute z-0 w-full h-full flex items-center justify-center">
-            <hr className="w-300 border-1 border-cyan-800 mt-150" />
-        </div> 
-    </section>
-    
-  )
+      </section>
+    )
+  }
+
+  return <CarouselDApiDemo />
 }

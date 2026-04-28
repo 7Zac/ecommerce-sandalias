@@ -47,7 +47,7 @@ export default function FeaturedCategories() {
                     <img
                       src={category.image || "/placeholder.svg"}
                       alt={category.name}
-                      className="w-full hover:scale-115 hover:-translate-y-8 transition-all duration-500 drop-shadow-md hover:drop-shadow-2xl"
+                      className="w-full hover:scale-115 hover:-translate-y-8 transition-all duration-500"
                     />
                     <div className="gap-6 flex flex-col items-center justify-center">
                       <div className="flex flex-col items-center">
