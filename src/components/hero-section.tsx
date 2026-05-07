@@ -14,12 +14,12 @@ export default function HeroSection() {
 
     return (
       <section className="mx-auto w-full max-w-[944px]">
-        <div className="relative w-full">
+        <div className="relative w-full mt-6">
           <Carousel className="w-full">
             <CarouselContent>
               {Array.from({ length: 5 }).map((_, index) => (
                 <CarouselItem key={index}>
-                  <Card className="m-px">
+                  <Card className="m-px border-0">
                     <CardContent className="flex justify-center p-6">
                       <img
                         src="/banner_colecao_inverno.png"
@@ -35,9 +35,9 @@ export default function HeroSection() {
             <CarouselNext />
           </Carousel>
 
-          <div className="relative flex justify-center">
+          <div className="relative flex justify-center p-6">
             <Link href="/homem">
-              <Button size="lg" className="bg-white text-blue-600 hover:bg-cyan-800 hover:text-white font-semibold shadow-lg transition-colors duration-300">
+              <Button size="lg" className="text-cyan-600 border border-cyan-800 hover:bg-cyan-800 hover:text-white font-semibold shadow-lg transition-colors duration-300">
                 Explorar Coleção
               </Button>
             </Link>
