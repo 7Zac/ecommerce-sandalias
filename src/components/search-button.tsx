@@ -3,9 +3,18 @@
 import { useState } from 'react'
 import { Search } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { useRouter } from 'next/navigation'
 
 export default function SearchButton() {
   const [isOpen, setIsOpen] = useState(false)
+  const router = useRouter()
+
+  const handleSearch = (query: string) => {
+    if (query.trim()) {
+      router.push(`/search?q=${encodeURIComponent(query.trim())}`)
+      setIsOpen(false)
+    }
+  }
 
   return (
     <div className="flex items-center">
@@ -23,6 +32,11 @@ export default function SearchButton() {
           isOpen ? 'w-48 opacity-100' : 'w-0 opacity-0 overflow-hidden'
         }`}
         onBlur={() => setIsOpen(false)}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter') {
+            handleSearch((e.target as HTMLInputElement).value)
+          }
+        }}
       />
     </div>
   )
