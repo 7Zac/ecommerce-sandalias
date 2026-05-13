@@ -1,10 +1,9 @@
 "use client"
 
 import Link from "next/link"
-import { Search } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import CartDrawer from "@/components/cart-drawer"
 import NavigationHeader from "@/components/navigation-header"
+import SearchButton from "@/components/search-button"
 
 export default function Header() {
   return (
@@ -28,11 +27,7 @@ export default function Header() {
 
           {/* Cart and Search */}
           <div className="flex items-center space-x-2">
-            <Button
-             className="hover:bg-cyan-800 text-cyan-600 hover:text-white"
-             variant="ghost" size="icon">
-              <Search className="h-5 w-5 " />
-            </Button>
+            <SearchButton />
             <CartDrawer />
           </div>
         </div>
