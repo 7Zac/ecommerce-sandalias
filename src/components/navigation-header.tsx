@@ -22,8 +22,8 @@ export default function NavigationHeader() {
           key={item.href}
           href={item.href}
           className={cn(
-            "text-gray-600 hover:text-blue-600 transition-colors",
-            pathname === item.href && "text-blue-600 font-medium border-b-2 border-blue-600 pb-1",
+            "text-cyan-600 hover:text-cyan-800 hover:border-b-cyan-600 hover:border-b transition-all duration-100",
+            pathname === item.href && "text-cyan-600 font-medium border-b-2 border-cyan-800 pb-1",
           )}
         >
           {item.label}

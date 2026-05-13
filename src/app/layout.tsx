@@ -5,8 +5,11 @@ import "./globals.css"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { CartProvider } from "@/contexts/cart-context"
+import { Cookie } from "next/font/google"
 
 const inter = Inter({ subsets: ["latin"] })
+
+const cookie = Cookie({ subsets: ["latin"], weight: "400"  })
 
 export const metadata: Metadata = {
   title: "Olinda - Sandálias Inverno 2025",

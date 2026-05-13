@@ -16,9 +16,10 @@ export default function Header() {
             <Link href="/" className="flex items-center space-x-2">              
                 <img src="/logo_olinda.png" alt="Olinda Logo" className="h-10 w-auto" />
             </Link>
-            <div className="text-sm text-gray-600 border-l pl-4">
-              <div className="font-semibold">Sandálias</div>
-              <div className="text-blue-600">Inverno 2025</div>
+            <div className="text-lg text-gray-600 border-l border-cyan-800 pl-4 flex flex-col items-center">
+              <div className="font-semibold">Coleção</div>
+              <hr className="w-full text-cyan-800"/>
+              <div className="text-cyan-600 text-2xl font-[Cookie]">Inverno 2025</div>
             </div>
           </div>
 
@@ -28,9 +29,9 @@ export default function Header() {
           {/* Cart and Search */}
           <div className="flex items-center space-x-2">
             <Button
-             className="hover:bg-blue-200"
+             className="hover:bg-cyan-800 text-cyan-600 hover:text-white"
              variant="ghost" size="icon">
-              <Search className="h-5 w-5 text-blue-600" />
+              <Search className="h-5 w-5 " />
             </Button>
             <CartDrawer />
           </div>
