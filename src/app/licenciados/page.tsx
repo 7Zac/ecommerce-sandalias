@@ -1,12 +1,8 @@
 import ProductCard from "@/components/product-card"
+import { getProductsByCategory } from "@/lib/products"
 
 export default function LicenciadosPage() {
-  const products = [
-    { id: 13, name: "Chinelo Super Heróis", price: "R$ 55,90", image: "/placeholder.svg?height=300&width=250" },
-    { id: 14, name: "Sandália Princesas", price: "R$ 49,90", image: "/placeholder.svg?height=300&width=250" },
-    { id: 15, name: "Papete Carros", price: "R$ 59,90", image: "/placeholder.svg?height=300&width=250" },
-    { id: 16, name: "Chinelo Personagens Animados", price: "R$ 52,90", image: "/placeholder.svg?height=300&width=250" },
-  ]
+  const products = getProductsByCategory("licenciados")
 
   return (
     <div className="container mx-auto px-4 py-16">

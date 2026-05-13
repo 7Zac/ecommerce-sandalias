@@ -1,12 +1,8 @@
 import ProductCard from "@/components/product-card"
+import { getProductsByCategory } from "@/lib/products"
 
 export default function KidsPage() {
-  const products = [
-    { id: 5, name: "Chinelo Infantil Colorido", price: "R$ 39,90", image: "/placeholder.svg?height=300&width=250" },
-    { id: 6, name: "Sandália Kids Aventura", price: "R$ 49,90", image: "/placeholder.svg?height=300&width=250" },
-    { id: 7, name: "Papete Esportiva", price: "R$ 59,90", image: "/placeholder.svg?height=300&width=250" },
-    { id: 8, name: "Chinelo Personagens", price: "R$ 45,90", image: "/placeholder.svg?height=300&width=250" },
-  ]
+  const products = getProductsByCategory("kids")
 
   return (
     <div className="container mx-auto px-4 py-16">

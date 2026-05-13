@@ -1,16 +1,8 @@
 import ProductCard from "@/components/product-card"
+import { getProductsByCategory } from "@/lib/products"
 
 export default function HomemPage() {
-  const products = [
-    { id: 17, name: "Chinelo Masculino Clássico", price: "R$ 79,90", image: "/placeholder.svg?height=300&width=250" },
-    { id: 18, name: "Sandália Esportiva", price: "R$ 95,90", image: "/placeholder.svg?height=300&width=250" },
-    { id: 19, name: "Papete Adventure", price: "R$ 119,90", image: "/placeholder.svg?height=300&width=250" },
-    { id: 20, name: "Chinelo Confort Masculino", price: "R$ 69,90", image: "/placeholder.svg?height=300&width=250" },
-    { id: 21, name: "Sandália Couro Premium", price: "R$ 149,90", image: "/placeholder.svg?height=300&width=250" },
-    { id: 22, name: "Chinelo Slide Moderno", price: "R$ 85,90", image: "/placeholder.svg?height=300&width=250" },
-    { id: 23, name: "Papete Outdoor", price: "R$ 129,90", image: "/placeholder.svg?height=300&width=250" },
-    { id: 24, name: "Sandália Casual", price: "R$ 89,90", image: "/placeholder.svg?height=300&width=250" },
-  ]
+  const products = getProductsByCategory("homem")
 
   return (
     <div className="container mx-auto px-4 py-16">
