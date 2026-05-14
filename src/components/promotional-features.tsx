@@ -30,19 +30,19 @@ export default function PromotionalFeatures() {
   ]
 
   return (
-    <section className="bg-cyan-600 py-8">
+    <section className="bg-slate-950 py-8">
       <div className="container mx-auto px-4">
         <Marquee pauseOnHover className="py-4">
           {features.map((feature, index) => (
-            <div key={index} className="text-center space-y-4 gap-4 flex flex-col items-center px-8">
+            <div key={index} className="text-center space-y-4 gap-4 flex justify-center items-center px-8 border-l border-slate-700">
               <div
-                className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-white shadow-lg ${feature.color}`}
+                className={`inline-flex items-center justify-center w-16 h-16 rounded-full shadow-lg ${feature.color}`}
               >
-                <feature.icon className="w-8 h-8" />
+                <feature.icon className="w-12 h-12" />
               </div>
-              <div className="p-0">
-                <h3 className="text-5xl font-medium text-white font-['Cookie']">{feature.title}</h3>
-                <p className="text-orange-300 font-bold">{feature.subtitle}</p>                
+              <div className="p-0 flex flex-col items-start">
+                <h3 className="text-2xl font-bold text-white">{feature.title}</h3>
+                <p className="text-orange-300 text-xl font-bold">{feature.subtitle}</p>                
               </div>                
             </div>
           ))}
