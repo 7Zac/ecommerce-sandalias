@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from "./ui/carousel"
 import { Card, CardContent } from "./ui/card"
 import React from "react"
 import { ChevronRight, Zap } from "lucide-react"
@@ -43,6 +43,24 @@ export default function HeroSection() {
   ]
 
   const [current, setCurrent] = React.useState(0)
+  const [carouselApi, setCarouselApi] = React.useState<CarouselApi | null>(null)
+
+  React.useEffect(() => {
+    if (!carouselApi) return
+
+    const updateCurrent = () => {
+      setCurrent(carouselApi.selectedScrollSnap())
+    }
+
+    updateCurrent()
+    carouselApi.on("select", updateCurrent)
+    carouselApi.on("reInit", updateCurrent)
+
+    return () => {
+      carouselApi.off("select", updateCurrent)
+      carouselApi.off("reInit", updateCurrent)
+    }
+  }, [carouselApi])
 
   return (
     <section className="w-full">
@@ -50,7 +68,7 @@ export default function HeroSection() {
         
         {/* Main Carousel with Overlay */}
         <div className="relative w-full mt-4 sm:mt-8 group">
-          <Carousel className="w-full">
+          <Carousel className="w-full" setApi={setCarouselApi}>
             <CarouselContent>
               {banners.map((banner, index) => (
                 <CarouselItem key={banner.id}>
@@ -128,7 +146,10 @@ export default function HeroSection() {
                       ? "bg-white w-8" 
                       : "bg-white/40 w-2 hover:bg-white/60"
                   }`}
-                  onClick={() => setCurrent(index)}
+                  onClick={() => {
+                    setCurrent(index)
+                    carouselApi?.scrollTo(index)
+                  }}
                   aria-label={`Go to slide ${index + 1}`}
                 />
               ))}
