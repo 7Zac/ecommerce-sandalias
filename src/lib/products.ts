@@ -28,14 +28,14 @@ export const allProducts: Product[] = [
   { id: 15, name: "Papete Carros", price: "R$ 59,90", image: "/placeholder.svg?height=300&width=250", category: "licenciados" },
   { id: 16, name: "Chinelo Personagens Animados", price: "R$ 52,90", image: "/placeholder.svg?height=300&width=250", category: "licenciados" },
   // Homem
-  { id: 17, name: "Chinelo Masculino Clássico", price: "R$ 79,90", image: "/placeholder.svg?height=300&width=250", category: "homem" },
-  { id: 18, name: "Sandália Esportiva", price: "R$ 95,90", image: "/placeholder.svg?height=300&width=250", category: "homem" },
-  { id: 19, name: "Papete Adventure", price: "R$ 119,90", image: "/placeholder.svg?height=300&width=250", category: "homem" },
-  { id: 20, name: "Chinelo Confort Masculino", price: "R$ 69,90", image: "/placeholder.svg?height=300&width=250", category: "homem" },
-  { id: 21, name: "Sandália Couro Premium", price: "R$ 149,90", image: "/placeholder.svg?height=300&width=250", category: "homem" },
-  { id: 22, name: "Chinelo Slide Moderno", price: "R$ 85,90", image: "/placeholder.svg?height=300&width=250", category: "homem" },
-  { id: 23, name: "Papete Outdoor", price: "R$ 129,90", image: "/placeholder.svg?height=300&width=250", category: "homem" },
-  { id: 24, name: "Sandália Casual", price: "R$ 89,90", image: "/placeholder.svg?height=300&width=250", category: "homem" },
+  { id: 17, name: "Chinelo Masculino Clássico", price: "R$ 79,90", image: "/anatomica-preta.png", category: "homem" },
+  { id: 18, name: "Sandália Esportiva", price: "R$ 95,90", image: "/anatomica-preta.png", category: "homem" },
+  { id: 19, name: "Papete Adventure", price: "R$ 119,90", image: "/anatomica-preta.png", category: "homem" },
+  { id: 20, name: "Chinelo Confort Masculino", price: "R$ 69,90", image: "/anatomica-preta.png", category: "homem" },
+  { id: 21, name: "Sandália Couro Premium", price: "R$ 149,90", image: "/anatomica-preta.png", category: "homem" },
+  { id: 22, name: "Chinelo Slide Moderno", price: "R$ 85,90", image: "/anatomica-preta.png", category: "homem" },
+  { id: 23, name: "Papete Outdoor", price: "R$ 129,90", image: "/anatomica-preta.png", category: "homem" },
+  { id: 24, name: "Sandália Casual", price: "R$ 89,90", image: "/anatomica-preta.png", category: "homem" },
 ]
 
 export const getProductsByCategory = (category: string): Product[] => {
