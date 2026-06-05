@@ -28,6 +28,12 @@ export default function FeaturedCategories() {
       image: "/baby_bee_jeans.png",
       description: "Cuidado especial para bebês",
     },
+    {
+      name: "Licenciados",
+      href: "/licenciados",
+      image: "/Tbt_Fem.png",
+      description: "Estilo que vale milhão. Maôee.",
+    },
   ]
 
   return (
@@ -38,7 +44,7 @@ export default function FeaturedCategories() {
           <p className="text-xl text-gray-600">Encontre o calçado perfeito para cada momento</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           {categories.map((category) => (
             <Link key={category.name} href={category.href}>
               <Card className="p-0 border-0 hover:bg-[#63a8b1] text-cyan-800 hover:text-white transition-all duration-300 group cursor-pointer">
