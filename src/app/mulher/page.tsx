@@ -122,7 +122,7 @@ export default function MulherPage() {
             </Link>
             <Link
               href="/kids"
-              className="rounded-3xl border border-slate-200 bg-gradient-to-r from-rose-500 to-rose-200 px-6 py-6 text-center shadow-sm transition duration-200 ease-linear hover:-translate-y-1 hover:to-rose-500 hover:shadow-lg"
+              className="rounded-3xl border border-slate-200 bg-gradient-to-r from-rose-200 to-rose-50 px-6 py-6 text-center shadow-sm transition duration-200 ease-linear hover:-translate-y-1 hover:to-rose-200 hover:shadow-lg"
             >
               <p className="text-sm uppercase tracking-[0.3em] text-slate-600">Infantil</p>
               <p className="mt-4 text-xl font-semibold text-slate-900">Conforto para elas e eles</p>

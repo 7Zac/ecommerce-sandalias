@@ -8,10 +8,10 @@ export interface Product {
 
 export const allProducts: Product[] = [
   // Mulher
-  { id: 1, name: "Sandália Feminina Clássica", price: "R$ 89,90", image: "/placeholder.svg?height=300&width=250", category: "mulher" },
-  { id: 2, name: "Chinelo Confort Plus", price: "R$ 65,90", image: "/placeholder.svg?height=300&width=250", category: "mulher" },
-  { id: 3, name: "Sandália Plataforma", price: "R$ 129,90", image: "/placeholder.svg?height=300&width=250", category: "mulher" },
-  { id: 4, name: "Rasteirinha Verão", price: "R$ 79,90", image: "/placeholder.svg?height=300&width=250", category: "mulher" },
+  { id: 1, name: "Sandália Feminina Clássica", price: "R$ 89,90", image: "/bicolor_fem_caribe.png", category: "mulher" },
+  { id: 2, name: "Chinelo Confort Plus", price: "R$ 65,90", image: "/bicolor_fem_caribe.png", category: "mulher" },
+  { id: 3, name: "Sandália Plataforma", price: "R$ 129,90", image: "/bicolor_fem_caribe.png", category: "mulher" },
+  { id: 4, name: "Rasteirinha Verão", price: "R$ 79,90", image: "/bicolor_fem_caribe.png", category: "mulher" },
   // Kids
   { id: 5, name: "Chinelo Infantil Colorido", price: "R$ 39,90", image: "/placeholder.svg?height=300&width=250", category: "kids" },
   { id: 6, name: "Sandália Kids Aventura", price: "R$ 49,90", image: "/placeholder.svg?height=300&width=250", category: "kids" },
