@@ -13,10 +13,10 @@ export const allProducts: Product[] = [
   { id: 3, name: "Sandália Plataforma", price: "R$ 129,90", image: "/bicolor_fem_caribe.png", category: "mulher" },
   { id: 4, name: "Rasteirinha Verão", price: "R$ 79,90", image: "/bicolor_fem_caribe.png", category: "mulher" },
   // Kids
-  { id: 5, name: "Chinelo Infantil Colorido", price: "R$ 39,90", image: "/placeholder.svg?height=300&width=250", category: "kids" },
-  { id: 6, name: "Sandália Kids Aventura", price: "R$ 49,90", image: "/placeholder.svg?height=300&width=250", category: "kids" },
-  { id: 7, name: "Papete Esportiva", price: "R$ 59,90", image: "/placeholder.svg?height=300&width=250", category: "kids" },
-  { id: 8, name: "Chinelo Personagens", price: "R$ 45,90", image: "/placeholder.svg?height=300&width=250", category: "kids" },
+  { id: 5, name: "Chinelo Infantil Colorido", price: "R$ 39,90", image: "/kids_fem_gato.png", category: "kids" },
+  { id: 6, name: "Sandália Kids Aventura", price: "R$ 49,90", image: "/kids_fem_gato.png", category: "kids" },
+  { id: 7, name: "Papete Esportiva", price: "R$ 59,90", image: "/kids_fem_gato.png", category: "kids" },
+  { id: 8, name: "Chinelo Personagens", price: "R$ 45,90", image: "/kids_fem_gato.png", category: "kids" },
   // Baby
   { id: 9, name: "Chinelo Baby Soft", price: "R$ 29,90", image: "/placeholder.svg?height=300&width=250", category: "baby" },
   { id: 10, name: "Sandália Primeiros Passos", price: "R$ 35,90", image: "/placeholder.svg?height=300&width=250", category: "baby" },
