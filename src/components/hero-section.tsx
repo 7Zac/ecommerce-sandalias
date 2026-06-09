@@ -6,6 +6,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Card, CardContent } from "./ui/card"
 import React from "react"
 import { ChevronRight, Zap } from "lucide-react"
+import Image from "next/image";
 
 
 export default function HeroSection() {
@@ -70,15 +71,16 @@ export default function HeroSection() {
         <div className="relative w-full mt-4 sm:mt-8 group">
           <Carousel className="w-full" setApi={setCarouselApi}>
             <CarouselContent>
-              {banners.map((banner, index) => (
+              {banners.map((banner) => (
                 <CarouselItem key={banner.id}>
                   <div className="relative overflow-hidden rounded-3xl shadow-2xl">
                     <Card className="m-px border-0 bg-transparent">
                       <CardContent className="relative flex justify-center p-0 h-[300px] sm:h-[400px] lg:h-[600px]">
                         {/* Background Image */}
-                        <img
+                        <Image
                           src={banner.image}
                           alt={banner.alt}
+                          fill
                           className="absolute inset-0 w-full h-full object-cover rounded-2xl"
                         />
                         
