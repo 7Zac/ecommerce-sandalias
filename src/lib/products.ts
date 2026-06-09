@@ -23,10 +23,10 @@ export const allProducts: Product[] = [
   { id: 11, name: "Papete Baby Confort", price: "R$ 39,90", image: "/baby_bee_jeans.png", category: "baby" },
   { id: 12, name: "Chinelo Antiderrapante", price: "R$ 32,90", image: "/baby_bee_jeans.png", category: "baby" },
   // Licenciados
-  { id: 13, name: "Chinelo Super Heróis", price: "R$ 55,90", image: "/placeholder.svg?height=300&width=250", category: "licenciados" },
-  { id: 14, name: "Sandália Princesas", price: "R$ 49,90", image: "/placeholder.svg?height=300&width=250", category: "licenciados" },
-  { id: 15, name: "Papete Carros", price: "R$ 59,90", image: "/placeholder.svg?height=300&width=250", category: "licenciados" },
-  { id: 16, name: "Chinelo Personagens Animados", price: "R$ 52,90", image: "/placeholder.svg?height=300&width=250", category: "licenciados" },
+  { id: 13, name: "Chinelo Super Heróis", price: "R$ 55,90", image: "/Tbt_Fem.png", category: "licenciados" },
+  { id: 14, name: "Sandália Princesas", price: "R$ 49,90", image: "/Tbt_Fem.png", category: "licenciados" },
+  { id: 15, name: "Papete Carros", price: "R$ 59,90", image: "/Tbt_Fem.png", category: "licenciados" },
+  { id: 16, name: "Chinelo Personagens Animados", price: "R$ 52,90", image: "/Tbt_Fem.png", category: "licenciados" },
   // Homem
   { id: 17, name: "Chinelo Masculino Clássico", price: "R$ 79,90", image: "/anatomica-preta.png", category: "homem" },
   { id: 18, name: "Sandália Esportiva", price: "R$ 95,90", image: "/anatomica-preta.png", category: "homem" },
