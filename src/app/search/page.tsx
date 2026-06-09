@@ -18,7 +18,7 @@ function SearchResults() {
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-2xl font-bold mb-4">Resultados da Pesquisa</h1>
-      <p className="mb-6">Busca por: "{query}"</p>
+      <p className="mb-6">Busca por: &quot;{query}&quot;</p>
 
       {filteredProducts.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -34,7 +34,7 @@ function SearchResults() {
           ))}
         </div>
       ) : (
-        <p>Nenhum produto encontrado para "{query}".</p>
+        <p>Nenhum produto encontrado para &quot;{query}&quot;.</p>
       )}
 
       <div className="mt-8">
