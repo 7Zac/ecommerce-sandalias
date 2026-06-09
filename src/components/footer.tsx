@@ -1,6 +1,6 @@
 import Link from "next/link"
-import Image from "next/image"
 import { Mail, Phone, MapPin, Facebook, Instagram, Twitter, Linkedin } from "lucide-react"
+import Image from "next/image"
 
 export default function Footer() {
     return (
@@ -11,9 +11,11 @@ export default function Footer() {
                     {/* Brand Section */}
                     <div className="lg:col-span-1">
                         <Link href="/" className="flex items-center space-x-2 mb-4">
-                            <img 
-                                src="./LOGO_OLINDA_BRANCO.png" 
+                            <Image 
+                                src="/LOGO_OLINDA_BRANCO.png" 
                                 alt="Logo Olinda"
+                                width={120}
+                                height={48}
                                 className="h-12 w-auto"
                             />
                         </Link>
