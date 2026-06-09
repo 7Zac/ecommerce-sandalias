@@ -16,19 +16,27 @@ export default function NavigationHeader() {
   ]
 
   return (
-    <nav className="hidden md:flex items-center space-x-8">
-      {navItems.map((item) => (
-        <Link
-          key={item.href}
-          href={item.href}
-          className={cn(
-            "text-cyan-600 hover:text-cyan-800 hover:border-b-cyan-600 hover:border-b transition-all duration-100",
-            pathname === item.href && "text-cyan-600 font-medium border-b-2 border-cyan-800 pb-1",
-          )}
-        >
-          {item.label}
-        </Link>
-      ))}
+    <nav className="hidden lg:flex items-center gap-6 text-sm font-medium">
+      {navItems.map((item) => {
+        const isActive = pathname === item.href
+
+        return (
+          <Link
+            key={item.href}
+            href={item.href}
+            className={cn(
+              "transition-colors duration-200",
+              "border-b-2 pb-1",
+              isActive
+                ? "border-cyan-600 text-slate-900"
+                : "border-transparent text-slate-600 hover:border-cyan-300 hover:text-slate-900"
+            )}
+            aria-current={isActive ? "page" : undefined}
+          >
+            {item.label}
+          </Link>
+        )
+      })}
     </nav>
   )
 }
