@@ -18,10 +18,10 @@ export const allProducts: Product[] = [
   { id: 7, name: "Papete Esportiva", price: "R$ 59,90", image: "/kids_fem_gato.png", category: "kids" },
   { id: 8, name: "Chinelo Personagens", price: "R$ 45,90", image: "/kids_fem_gato.png", category: "kids" },
   // Baby
-  { id: 9, name: "Chinelo Baby Soft", price: "R$ 29,90", image: "/placeholder.svg?height=300&width=250", category: "baby" },
-  { id: 10, name: "Sandália Primeiros Passos", price: "R$ 35,90", image: "/placeholder.svg?height=300&width=250", category: "baby" },
-  { id: 11, name: "Papete Baby Confort", price: "R$ 39,90", image: "/placeholder.svg?height=300&width=250", category: "baby" },
-  { id: 12, name: "Chinelo Antiderrapante", price: "R$ 32,90", image: "/placeholder.svg?height=300&width=250", category: "baby" },
+  { id: 9, name: "Chinelo Baby Soft", price: "R$ 29,90", image: "/baby_bee_jeans.png", category: "baby" },
+  { id: 10, name: "Sandália Primeiros Passos", price: "R$ 35,90", image: "/baby_bee_jeans.png", category: "baby" },
+  { id: 11, name: "Papete Baby Confort", price: "R$ 39,90", image: "/baby_bee_jeans.png", category: "baby" },
+  { id: 12, name: "Chinelo Antiderrapante", price: "R$ 32,90", image: "/baby_bee_jeans.png", category: "baby" },
   // Licenciados
   { id: 13, name: "Chinelo Super Heróis", price: "R$ 55,90", image: "/placeholder.svg?height=300&width=250", category: "licenciados" },
   { id: 14, name: "Sandália Princesas", price: "R$ 49,90", image: "/placeholder.svg?height=300&width=250", category: "licenciados" },
