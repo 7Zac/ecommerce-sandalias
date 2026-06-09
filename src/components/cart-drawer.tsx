@@ -1,11 +1,12 @@
 "use client"
 
 import { useState } from "react"
-import { ShoppingCart, Plus, Minus, Trash2, X } from "lucide-react"
+import { ShoppingCart, Plus, Minus, Trash2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { useCart } from "@/contexts/cart-context"
+import Image from "next/image"
 
 export default function CartDrawer() {
   const { items, total, itemCount, updateQuantity, removeItem, clearCart } = useCart()
@@ -64,7 +65,7 @@ export default function CartDrawer() {
             <div className="flex max-h-[58vh] flex-col gap-4 overflow-y-auto pr-1 pb-2">
               {items.map((item) => (
                 <div key={item.id} className="grid grid-cols-[auto_1fr] gap-4 rounded-3xl border border-slate-200 bg-slate-50 p-4">
-                  <img
+                  <Image
                     src={item.image || "/placeholder.svg"}
                     alt={item.name}
                     className="h-20 w-20 rounded-2xl object-cover"
