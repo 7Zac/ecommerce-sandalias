@@ -20,7 +20,7 @@ export default function Header() {
 
         </div>
 
-        <div className="hidden lg:flex items-center justify-between">
+        <div className="hidden lg:flex items-center">
           <NavigationHeader />
         </div>
           <div className="flex items-center gap-2">
