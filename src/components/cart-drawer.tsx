@@ -68,6 +68,8 @@ export default function CartDrawer() {
                   <Image
                     src={item.image || "/placeholder.svg"}
                     alt={item.name}
+                    width={80}
+                    height={80}
                     className="h-20 w-20 rounded-2xl object-cover"
                   />
                   <div className="flex flex-col justify-between">
