@@ -1,28 +1,14 @@
 "use client"
 import ProductCard from "@/components/product-card"
+import ProductSortControls from "@/components/product-sort-controls"
 import { getProductsByCategory } from "@/lib/products"
+import { useSortProducts } from "@/hooks/useSortProducts"
 import Link from "next/link"
-import { useMemo, useState } from "react"
-
-function parsePrice(value: string) {
-  return Number.parseFloat(value.replace("R$", "").replace(".", "").replace(",", ".").trim())
-}
+import { useMemo } from "react"
 
 export default function BabyPage() {
-  const [sortBy, setSortBy] = useState("featured")
   const products = useMemo(() => getProductsByCategory("baby"), [])
-
-  const sortedProducts = useMemo(() => {
-    return [...products].sort((a, b) => {
-      if (sortBy === "price-asc") {
-        return parsePrice(a.price) - parsePrice(b.price)
-      }
-      if (sortBy === "price-desc") {
-        return parsePrice(b.price) - parsePrice(a.price)
-      }
-      return a.id - b.id
-    })
-  }, [products, sortBy])
+  const { sortedProducts, sortBy, setSortBy } = useSortProducts(products)
 
   return (
     <main className="bg-slate-50">
@@ -45,43 +31,18 @@ export default function BabyPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
-        <div className="mb-8 flex flex-col gap-4 rounded-3xl bg-white p-6 shadow-sm sm:flex-row sm:items-center sm:justify-between sm:p-8">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-sky-700">Baby</p>
-            <h2 className="mt-3 text-3xl font-semibold text-slate-900">Navegue pelos melhores modelos</h2>
-            <p className="mt-2 text-sm text-slate-500">{sortedProducts.length} opções disponíveis para conforto, segurança e estilo.</p>
-          </div>
-
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-            <div className="inline-flex rounded-full bg-slate-100 p-2 text-sm text-slate-600 shadow-inner">
-              <span className="font-semibold text-slate-900 p-2">Ordenar por:</span>
-              <select
-                value={sortBy}
-                onChange={(event) => setSortBy(event.target.value)}
-                className="ml-3 rounded-full border border-slate-200 bg-white px-3 py-2 text-sm text-slate-700 outline-none transition focus:border-sky-500 focus:ring-2 focus:ring-sky-100"
-              >
-                <option value="featured">Mais relevantes</option>
-                <option value="price-asc">Preço: menor primeiro</option>
-                <option value="price-desc">Preço: maior primeiro</option>
-              </select>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {[
-                { label: "Novidade", href: "/" },
-                { label: "Promoção", href: "/" },
-                { label: "Mais vendidos", href: "/" },
-              ].map((item) => (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-sky-300 hover:bg-sky-50"
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
+        <ProductSortControls
+          sortBy={sortBy}
+          onSortChange={setSortBy}
+          productsCount={sortedProducts.length}
+          categoryLabel="Baby"
+          accentColor="sky"
+          filterOptions={[
+            { label: "Novidade", href: "/" },
+            { label: "Promoção", href: "/" },
+            { label: "Mais vendidos", href: "/" },
+          ]}
+        />
 
         <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
           {sortedProducts.map((product) => (
