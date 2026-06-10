@@ -134,12 +134,12 @@ export default function HeroSection() {
             
             {/* Custom Navigation Buttons */}
             <div className="absolute bottom-6 sm:bottom-8 right-6 sm:right-16 z-20 flex gap-2">
-              <CarouselPrevious className="relative position-static h-12 w-12 bg-white/60 hover:bg-white text-white border-0 transition-all duration-300" />
-              <CarouselNext className="relative position-static h-12 w-12 bg-white/60 hover:bg-white text-white border-0 transition-all duration-300" />
+              <CarouselPrevious className="relative position-static h-12 w-12 max-sm:hidden bg-white/60 hover:bg-white text-white border-0 transition-all duration-300" />
+              <CarouselNext className="relative position-static h-12 w-12 max-sm:hidden bg-white/60 hover:bg-white text-white border-0 transition-all duration-300" />
             </div>
             
             {/* Slide Indicators */}
-            <div className="absolute bottom-6 sm:bottom-8 left-6 sm:left-8 z-20 flex justify-center gap-2">
+            <div className="absolute max-sm:p-2 bottom-6 sm:bottom-8 left-6 sm:left-8 z-20 flex justify-center gap-2">
               {banners.map((_, index) => (
                 <button
                   key={index}
