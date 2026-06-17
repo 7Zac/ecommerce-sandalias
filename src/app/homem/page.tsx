@@ -1,10 +1,12 @@
 "use client";
 import ProductCard from "@/components/product-card"
+import infoCards from "@/components/info-cards"
 import ProductSortControls from "@/components/product-sort-controls"
 import { getProductsByCategory } from "@/lib/products"
 import { useSortProducts } from "@/hooks/useSortProducts"
 import Link from "next/link"
 import { useMemo } from "react"
+import InfoCards from "@/components/info-cards";
 
 export default function HomemPage() {
   const products = useMemo(() => getProductsByCategory("homem"), [])
@@ -60,23 +62,11 @@ export default function HomemPage() {
             />
           ))}
         </div>
-        <div className="flex justify-around items-center p-4 w-full h-full">
-          <div className="mt-8 flex flex-col gap-4">
-            <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-blue-50 to-blue-100 p-5 shadow-sm transition-all duration-300 hover:shadow-lg hover:from-blue-100 hover:to-blue-200 hover:-translate-y-1">
-              <p className="text-sm font-semibold text-blue-900">Frete Rápido</p>
-              <p className="mt-2 text-sm text-blue-600">Entrega em até 3 dias úteis para todo o Brasil.</p>
-            </div>
-            <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-emerald-50 to-emerald-100 p-5 shadow-sm transition-all duration-300 hover:shadow-lg hover:from-emerald-100 hover:to-emerald-200 hover:-translate-y-1">
-              <p className="text-sm font-semibold text-emerald-900">Troca Fácil</p>
-              <p className="mt-2 text-sm text-emerald-600">Você troca em até 30 dias com toda tranquilidade.</p>
-            </div>
-            <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-purple-50 to-purple-100 p-5 shadow-sm transition-all duration-300 hover:shadow-lg hover:from-purple-100 hover:to-purple-200 hover:-translate-y-1">
-              <p className="text-sm font-semibold text-purple-900">Produtos Selecionados</p>
-              <p className="mt-2 text-sm text-purple-600">Cada item passa por um controle de qualidade rigoroso.</p>
-            </div>
-          </div>
+        <div className="flex max-sm:flex-col justify-around items-center p-4 w-full h-full gap-4">
 
-          <div className="flex flex-col gap-4">
+          <InfoCards />
+
+          <div className="flex flex-col max-sm:w-full gap-4">
             <Link
               href="/licenciados"
               className="rounded-3xl border border-slate-200 bg-slate-950 px-6 py-6 text-center text-white shadow-lg transition duration-200 hover:-translate-y-1 hover:bg-slate-900"
