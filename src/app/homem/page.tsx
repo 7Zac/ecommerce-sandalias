@@ -1,6 +1,5 @@
 "use client";
 import ProductCard from "@/components/product-card"
-import infoCards from "@/components/info-cards"
 import ProductSortControls from "@/components/product-sort-controls"
 import { getProductsByCategory } from "@/lib/products"
 import { useSortProducts } from "@/hooks/useSortProducts"
