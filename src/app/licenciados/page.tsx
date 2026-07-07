@@ -5,6 +5,7 @@ import { getProductsByCategory } from "@/lib/products"
 import { useSortProducts } from "@/hooks/useSortProducts"
 import Link from "next/link"
 import { useMemo } from "react"
+import InfoCards from "@/components/info-cards"
 
 export default function LicenciadosPage() {
   const products = useMemo(() => getProductsByCategory("licenciados"), [])
@@ -57,23 +58,11 @@ export default function LicenciadosPage() {
           ))}
         </div>
 
-        <div className="flex justify-around items-center p-4 w-full h-full mt-10">
-          <div className="mt-8 flex flex-col gap-4">
-            <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-violet-50 to-violet-100 p-5 shadow-sm transition-all duration-300 hover:shadow-lg hover:from-violet-100 hover:to-violet-200 hover:-translate-y-1">
-              <p className="text-sm font-semibold text-violet-900">Frete Rápido</p>
-              <p className="mt-2 text-sm text-violet-600">Entrega em até 3 dias úteis para todo o Brasil.</p>
-            </div>
-            <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-emerald-50 to-emerald-100 p-5 shadow-sm transition-all duration-300 hover:shadow-lg hover:from-emerald-100 hover:to-emerald-200 hover:-translate-y-1">
-              <p className="text-sm font-semibold text-emerald-900">Troca Fácil</p>
-              <p className="mt-2 text-sm text-emerald-600">Você troca em até 30 dias com toda tranquilidade.</p>
-            </div>
-            <div className="rounded-3xl border border-slate-200 bg-gradient-to-br from-purple-50 to-purple-100 p-5 shadow-sm transition-all duration-300 hover:shadow-lg hover:from-purple-100 hover:to-purple-200 hover:-translate-y-1">
-              <p className="text-sm font-semibold text-purple-900">Produtos Selecionados</p>
-              <p className="mt-2 text-sm text-purple-600">Cada item passa por um controle de qualidade rigoroso.</p>
-            </div>
-          </div>
+        <div className="flex max-sm:flex-col justify-around items-center p-4 w-full h-full gap-4">
 
-          <div className="flex flex-col gap-4">
+          <InfoCards />
+
+          <div className="flex max-sm:w-full flex-col gap-4">
             <Link
               href="/mulher"
               className="rounded-3xl border border-slate-200 bg-slate-950 px-6 py-6 text-center text-white shadow-lg transition duration-200 hover:-translate-y-1 hover:bg-slate-900"
@@ -83,7 +72,7 @@ export default function LicenciadosPage() {
             </Link>
             <Link
               href="/kids"
-              className="rounded-3xl border border-slate-200 bg-gradient-to-r from-fuchsia-500 to-fuchsia-200 px-6 py-6 text-center shadow-sm transition duration-200 ease-linear hover:-translate-y-1 hover:to-fuchsia-500 hover:shadow-lg"
+              className="rounded-3xl border border-slate-200 bg-gradient-to-r from-fuchsia-300 to-fuchsia-200 px-6 py-6 text-center shadow-sm transition duration-200 ease-linear hover:-translate-y-1 hover:to-fuchsia-500 hover:shadow-lg"
             >
               <p className="text-sm uppercase tracking-[0.3em] text-slate-600">Infantil</p>
               <p className="mt-4 text-xl font-semibold text-slate-900">Conforto para elas e eles</p>
