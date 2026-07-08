@@ -4,12 +4,12 @@ import ProductDetail from "@/components/product-detail"
 import ProductCard from "@/components/product-card"
 
 interface Props {
-  params: { id: string }
+  params: Promise<{ id: string }>;
 }
 
-export default function Page({ params }: Props) {
-  const id = Number(params.id)
-  const product = allProducts.find((p) => p.id === id)
+export default async function Page({ params }: Props) {
+  const id = await params;
+  const product = allProducts.find((p) => p.id === Number(id));
 
   if (!product) {
     return (
