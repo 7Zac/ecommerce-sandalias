@@ -4,11 +4,11 @@ import ProductDetail from "@/components/product-detail"
 import ProductCard from "@/components/product-card"
 
 interface Props {
-  params: Promise<{ id: string }>;
+  params: Promise<{ id: number }>;
 }
 
 export default async function Page({ params }: Props) {
-  const id = await params;
+  const { id } = await params;
   const product = allProducts.find((p) => p.id === Number(id));
 
   if (!product) {
