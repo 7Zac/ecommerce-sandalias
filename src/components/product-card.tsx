@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ShoppingCart, Check } from "lucide-react"
+import Link from "next/link"
 import { useCart } from "@/contexts/cart-context"
 import { useState } from "react"
 
@@ -87,29 +88,39 @@ export default function ProductCard({ id, name, price, image, category }: Produc
           </Badge>
         </div>
 
-        <Button
-          className="w-full rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-lg transition duration-300 hover:from-cyan-600 hover:to-blue-700 disabled:cursor-not-allowed disabled:opacity-60"
-          onClick={handleAddToCart}
-          disabled={isInCart || isAdding}
-          aria-busy={isAdding}
-        >
-          {isInCart ? (
-            <span className="inline-flex items-center justify-center gap-2">
-              <Check className="h-4 w-4" />
-              Já no carrinho
-            </span>
-          ) : isAdding ? (
-            <span className="inline-flex items-center justify-center gap-2">
-              <Check className="h-4 w-4" />
-              Adicionando...
-            </span>
-          ) : (
-            <span className="inline-flex items-center justify-center gap-2">
-              <ShoppingCart className="h-4 w-4" />
-              Adicionar ao carrinho
-            </span>
-          )}
-        </Button>
+        <div className="flex flex-col gap-2">
+          <Button
+            asChild
+            variant="outline"
+            className="w-full rounded-full border-sky-200 bg-white px-5 py-3 text-sm font-semibold text-sky-700 shadow-sm transition duration-300 hover:bg-sky-50 hover:text-sky-800"
+          >
+            <Link href={`/product/${id}`}>Ver detalhes</Link>
+          </Button>
+
+          <Button
+            className="w-full rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-lg transition duration-300 hover:from-cyan-600 hover:to-blue-700 disabled:cursor-not-allowed disabled:opacity-60"
+            onClick={handleAddToCart}
+            disabled={isInCart || isAdding}
+            aria-busy={isAdding}
+          >
+            {isInCart ? (
+              <span className="inline-flex items-center justify-center gap-2">
+                <Check className="h-4 w-4" />
+                Já no carrinho
+              </span>
+            ) : isAdding ? (
+              <span className="inline-flex items-center justify-center gap-2">
+                <Check className="h-4 w-4" />
+                Adicionando...
+              </span>
+            ) : (
+              <span className="inline-flex items-center justify-center gap-2">
+                <ShoppingCart className="h-4 w-4" />
+                Adicionar ao carrinho
+              </span>
+            )}
+          </Button>
+        </div>
       </CardContent>
     </Card>
   )
