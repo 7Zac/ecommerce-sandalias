@@ -49,7 +49,7 @@ export default function ProductDetail({ product }: { product: Product }) {
           <img
             src={product.image || "/placeholder.svg"}
             alt={product.name}
-            className="w-full h-[260px] sm:h-[320px] lg:h-[420px] object-cover rounded-lg shadow-md"
+            className="w-full object-cover"
           />
         </div>
 
