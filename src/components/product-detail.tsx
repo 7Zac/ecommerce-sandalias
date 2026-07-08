@@ -44,23 +44,27 @@ export default function ProductDetail({ product }: { product: Product }) {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center gap-6">
-        <div className="w-1/2">
-          <img src={product.image || "/placeholder.svg"} alt={product.name} className="w-full h-[420px] object-cover rounded-lg shadow-md" />
+      <div className="flex flex-col gap-6 lg:flex-row lg:items-center">
+        <div className="w-full lg:w-1/2">
+          <img
+            src={product.image || "/placeholder.svg"}
+            alt={product.name}
+            className="w-full h-[260px] sm:h-[320px] lg:h-[420px] object-cover rounded-lg shadow-md"
+          />
         </div>
 
-        <div className="w-1/2 space-y-4">
-          <div className="flex items-center justify-between">
+        <div className="w-full lg:w-1/2 space-y-4">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <h1 className="text-2xl font-bold text-slate-900">{product.name}</h1>
-            <Badge className="bg-slate-900/90 text-white px-3 py-1">{product.category}</Badge>
+            <Badge className="bg-slate-900/90 text-white px-3 py-1 self-start sm:self-auto">{product.category}</Badge>
           </div>
 
           <p className="text-3xl font-extrabold text-sky-600">{formattedPrice}</p>
 
           <p className="text-sm text-slate-600">Peça selecionada a dedo: conforto e durabilidade sem abrir mão do estilo.</p>
 
-          <div className="flex items-center gap-3">
-            <div className="flex items-center rounded-lg border border-slate-200 bg-white">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div className="flex items-center justify-between rounded-lg border border-slate-200 bg-white sm:w-auto sm:justify-start">
               <button
                 aria-label="Diminuir quantidade"
                 className="p-3"
@@ -75,11 +79,11 @@ export default function ProductDetail({ product }: { product: Product }) {
             </div>
 
             <Button
-              className="rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-lg hover:from-cyan-600 hover:to-blue-700"
+              className="w-full rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-lg hover:from-cyan-600 hover:to-blue-700 sm:w-auto"
               onClick={handleAdd}
               disabled={isInCart}
             >
-              <span className="inline-flex items-center gap-2">
+              <span className="inline-flex items-center justify-center gap-2">
                 <ShoppingCart className="w-4 h-4" />
                 {isInCart ? "Já no carrinho" : isAdding ? "Adicionando..." : "Adicionar ao carrinho"}
               </span>
