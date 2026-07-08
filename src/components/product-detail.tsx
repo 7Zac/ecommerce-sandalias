@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ShoppingCart, Minus, Plus } from "lucide-react"
 import { useCart } from "@/contexts/cart-context"
+import { ProductImageZoom } from "@/components/product-image-zoom"
 
 interface Product {
   id: number
@@ -46,11 +47,7 @@ export default function ProductDetail({ product }: { product: Product }) {
     <div className="space-y-6">
       <div className="flex flex-col gap-6 lg:flex-row lg:items-center">
         <div className="w-full lg:w-1/2">
-          <img
-            src={product.image || "/placeholder.svg"}
-            alt={product.name}
-            className="w-full object-cover"
-          />
+          <ProductImageZoom src={product.image || "/placeholder.svg"} alt={product.name} />
         </div>
 
         <div className="w-full lg:w-1/2 space-y-4">
