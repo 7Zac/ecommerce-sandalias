@@ -73,8 +73,8 @@ export default function HeroSection() {
             <CarouselContent>
               {banners.map((banner) => (
                 <CarouselItem key={banner.id}>
-                  <div className="relative overflow-hidden rounded-3xl shadow-2xl">
-                    <Card className="m-px border-0 bg-transparent">
+                  <div className="relative overflow-hidden rounded-3xl">
+                    <Card className="border-0">
                       <CardContent className="relative flex justify-center p-0 h-[300px] sm:h-[400px] lg:h-[600px]">
                         {/* Background Image */}
                         <Image
