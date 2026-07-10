@@ -1,5 +1,5 @@
 import { CreditCard, Gift, Truck, Banknote } from "lucide-react"
-import { Marquee } from "./ui/marquee"
+import { Marquee } from "../ui/marquee"
 
 export default function PromotionalFeatures() {
   const features = [

@@ -1,6 +1,6 @@
-import HeroSection from "@/components/hero-section";
-import FeaturedCategories from "@/components/featured-categories";
-import PromotionalFeatures from "@/components/promotional-features";
+import HeroSection from "@/components/home/hero-section";
+import FeaturedCategories from "@/components/home/featured-categories";
+import PromotionalFeatures from "@/components/home/promotional-features";
 
 export default function HomePage() {
   return (

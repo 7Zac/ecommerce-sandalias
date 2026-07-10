@@ -5,7 +5,7 @@ import { getProductsByCategory } from "@/lib/products"
 import { useSortProducts } from "@/hooks/useSortProducts"
 import Link from "next/link"
 import { useMemo } from "react"
-import InfoCards from "@/components/info-cards"
+import InfoCards from "@/components/home/info-cards"
 
 export default function LicenciadosPage() {
   const products = useMemo(() => getProductsByCategory("licenciados"), [])

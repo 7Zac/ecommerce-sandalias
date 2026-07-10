@@ -2,8 +2,8 @@
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from "./ui/carousel"
-import { Card, CardContent } from "./ui/card"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from "../ui/carousel"
+import { Card, CardContent } from "../ui/card"
 import React from "react"
 import { ChevronRight, Zap } from "lucide-react"
 import Image from "next/image";
