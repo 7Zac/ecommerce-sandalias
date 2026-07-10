@@ -2,8 +2,8 @@
 
 import Link from "next/link"
 import CartDrawer from "@/components/cart-drawer"
-import MobileNavigation from "@/components/mobile-navigation"
-import NavigationHeader from "@/components/navigation-header"
+import MobileNavigation from "@/components/layout/mobile-navigation"
+import NavigationHeader from "@/components/layout/navigation-header"
 import SearchButton from "@/components/search-button"
 
 export default function Header() {
