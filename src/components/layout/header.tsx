@@ -1,10 +1,10 @@
 "use client"
 
 import Link from "next/link"
-import CartDrawer from "@/components/cart-drawer"
+import CartDrawer from "@/components/cart/cart-drawer"
 import MobileNavigation from "@/components/layout/mobile-navigation"
 import NavigationHeader from "@/components/layout/navigation-header"
-import SearchButton from "@/components/search-button"
+import SearchButton from "@/components/search/search-button"
 
 export default function Header() {
   return (
