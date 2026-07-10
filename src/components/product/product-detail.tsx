@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ShoppingCart, Minus, Plus } from "lucide-react"
 import { useCart } from "@/contexts/cart-context"
-import { ProductImageZoom } from "@/components/product-image-zoom"
+import { ProductImageZoom } from "@/components/product/product-image-zoom"
 
 interface Product {
   id: number

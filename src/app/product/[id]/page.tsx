@@ -1,7 +1,7 @@
 import React from "react"
 import { allProducts } from "@/lib/products"
-import ProductDetail from "@/components/product-detail"
-import ProductCard from "@/components/product-card"
+import ProductDetail from "@/components/product/product-detail"
+import ProductCard from "@/components/product/product-card"
 
 interface Props {
   params: Promise<{ id: number }>;

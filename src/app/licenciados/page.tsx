@@ -1,6 +1,6 @@
 "use client"
-import ProductCard from "@/components/product-card"
-import ProductSortControls from "@/components/product-sort-controls"
+import ProductCard from "@/components/product/product-card"
+import ProductSortControls from "@/components/product/product-sort-controls"
 import { getProductsByCategory } from "@/lib/products"
 import { useSortProducts } from "@/hooks/useSortProducts"
 import Link from "next/link"

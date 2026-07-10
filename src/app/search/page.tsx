@@ -3,7 +3,7 @@
 import { useSearchParams } from 'next/navigation'
 import { Suspense } from 'react'
 import Link from 'next/link'
-import ProductCard from '@/components/product-card'
+import ProductCard from '@/components/product/product-card'
 import { allProducts } from '@/lib/products'
 
 function SearchResults() {
